@@ -1,7 +1,13 @@
 
 export default function Header() {
+    const name = "Antonio"
+    const total = 100
+
 
     return(
-        <h1>Desde Header</h1>
+        <>
+            <p>Hola, soy {name}</p>
+            <p>El precio total es de: {total}</p>
+        </>
     )
 }
