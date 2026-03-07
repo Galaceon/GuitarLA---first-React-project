@@ -6,8 +6,8 @@ function App() {
 
     //State
     const [auth, setAuth] = useState(false)
-
-    console.log(auth)
+    const [total, setTotal] = useState(0)
+    const [cart, setCart] = useState([])
 
   return (
     <>
