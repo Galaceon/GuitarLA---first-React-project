@@ -19,7 +19,7 @@ function App() {
 
     console.log(initialCart)
     
-    const [data, setData] = useState(db)
+    const [data] = useState(db)
     const [cart, setCart] = useState(initialCart)
 
     console.log(cart);
