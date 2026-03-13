@@ -8,13 +8,19 @@ function App() {
     const initialCart = () => {
         const localStorageCart = localStorage.getItem('cart')
 
-        return localStorageCart ? JSON.parse(localStorageCart) : []
+        if (!localStorageCart) return []
+
+        const parsed = JSON.parse(localStorageCart)
+
+        return Array.isArray(parsed)
+            ? parsed.filter(item => item && item.quantity)
+            : []
     }
 
     console.log(initialCart)
     
     const [data, setData] = useState(db)
-    const [cart, setCart] = useState(initialCart())
+    const [cart, setCart] = useState(initialCart)
 
     console.log(cart);
 
