@@ -2,8 +2,12 @@ import Header from "./components/Header"
 import Guitar from "./components/Guitar"
 import { useState, useEffect } from "react"
 import { db } from './data/db'
+import { useCart } from "./hooks/useCart"
 
 function App() {
+
+    const {auth} = useCart()
+    console.log(auth)
 
     const initialCart = () => {
         const localStorageCart = localStorage.getItem('cart')
@@ -16,13 +20,9 @@ function App() {
             ? parsed.filter(item => item && item.quantity)
             : []
     }
-
-    console.log(initialCart)
     
     const [data] = useState(db)
     const [cart, setCart] = useState(initialCart)
-
-    console.log(cart);
 
     const MAX_ITEMS = 5
     const MIN_ITEMS = 1

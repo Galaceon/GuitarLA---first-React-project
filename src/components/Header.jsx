@@ -19,7 +19,7 @@ export default function Header({cart, removeFromCart, increaseQuantity, decrease
                         <div 
                             className="carrito"
                         >
-                            <img className="img-fluid" src="./public/img/carrito.png" alt="imagen carrito" />
+                            <img className="img-fluid" src="/img/carrito.png" alt="imagen carrito" />
 
                             <div id="carrito" className="bg-white p-3">
                                 
